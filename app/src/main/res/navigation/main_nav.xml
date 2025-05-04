@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/anaSayfaFragment">
+
+    <fragment
+        android:id="@+id/anaSayfaFragment"
+        android:name="com.example.android_mug_pupilica_odev_4_calisma_yapisi.AnaSayfaFragment"
+        android:label="fragment_ana_sayfa"
+        tools:layout="@layout/fragment_ana_sayfa" >
+        <action
+            android:id="@+id/anasayfadanASayfasinaGecis"
+            app:destination="@id/ASayfasiFragment" />
+        <action
+            android:id="@+id/anasayfadanXSayfasinaGecis"
+            app:destination="@id/XSayfasiFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ASayfasiFragment"
+        android:name="com.example.android_mug_pupilica_odev_4_calisma_yapisi.ASayfasiFragment"
+        android:label="fragment_a_sayfasi"
+        tools:layout="@layout/fragment_a_sayfasi" >
+        <action
+            android:id="@+id/ASayfasindanBSayfasinaGecis"
+            app:destination="@id/BSayfasiFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/XSayfasiFragment"
+        android:name="com.example.android_mug_pupilica_odev_4_calisma_yapisi.XSayfasiFragment"
+        android:label="fragment_x_sayfasi"
+        tools:layout="@layout/fragment_x_sayfasi" >
+        <action
+            android:id="@+id/XSayfasindanYSayfasinaGecis"
+            app:destination="@id/YSayfasiFragment"
+            app:popUpTo="@id/anaSayfaFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/BSayfasiFragment"
+        android:name="com.example.android_mug_pupilica_odev_4_calisma_yapisi.BSayfasiFragment"
+        android:label="fragment_b_sayfasi"
+        tools:layout="@layout/fragment_b_sayfasi" >
+        <action
+            android:id="@+id/BSayfasindanYSayfasinaGecis"
+            app:destination="@id/YSayfasiFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/YSayfasiFragment"
+        android:name="com.example.android_mug_pupilica_odev_4_calisma_yapisi.YSayfasiFragment"
+        android:label="fragment_y_sayfasi"
+        tools:layout="@layout/fragment_y_sayfasi" />
+</navigation>
